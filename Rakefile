@@ -12,10 +12,6 @@ namespace :greeting do
 end
 
 
-desc 'giving access to the to the config enviroment'
-task :environment do
-  require_relative './config/environment'
-end
 
 namespace :db do
   desc 'migrate changes to your database'
@@ -25,6 +21,10 @@ namespace :db do
     desc 'seed the database with some dummy data'
     task :seed do
       require_relative './db/seeds.rb'
+      desc 'giving access to the to the config enviroment'
+      task :environment do
+        require_relative './config/environment'
+      end
     end
 end
 
