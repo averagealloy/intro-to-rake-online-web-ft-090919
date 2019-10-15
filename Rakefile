@@ -12,7 +12,7 @@ namespace :greeting do
 end
 
 
-desc 'giving access to the to the config enviroment '
+desc 'giving access to the to the config enviroment'
 task :environment do
   require_relative './config/environment'
 end
